@@ -22,10 +22,30 @@ To answer this question I plot a line showing the change of live expectancy over
 
 As we can see ***live expectancy increaset*** over time in every country.
 
-During 15 years starting in 2000 the life expectancy at birth in:
+Over 15 years starting in 2000 the life expectancy at birth in:
 + Chile raised from 77.3 to 80.5.
 + China raised from 71.7 to 76.1.
 + Germany raised from 78.0 to 81.0.
 + Mexico raised from 74.8 to 76.7.
 + United States of America raised from 76.8 to 79.3.
 + Zimbabwe raised from 44.3 to 60.7.
+
+2. Has GDP increased over time in the six nations?
+
+To answer this question I plot a line showing the change of gross domestic product over time in every country:
+![GDP](https://github.com/GrzegorzCiepiel/Live_Expectancy_Project/assets/135313652/fcb2bb34-c4a6-4ed4-b6e8-f3c8b77b9076)
+
+As we can see, this time also ***gross domestic product increaset*** over time in every country.
+
+Over15 years starting in 2000 the gross domestic product in 
++ Chile raised from 70 bln to 278 bln.
++ China raised from 1211 bln to 11065 bln.
++ Germany raised from 1950 bln to 3891 bln.
++ Mexico raised from 684 bln to 1298 bln.
++ United States of America raised from 10300 bln to 18100 bln.
++ Zimbabwe raised from 4 bln to 16 bln.
+
+3. Is there a correlation between GDP and life expectancy of a country?
+
+To answer this question I prepared scatterplot between live expectancy and GDP values for every country:
+![Live expectancy vs GDP](https://github.com/GrzegorzCiepiel/Live_Expectancy_Project/assets/135313652/259e8706-06f3-467b-88ec-591dd7f509b4)
