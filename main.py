@@ -1,7 +1,7 @@
 import pandas as pd
 pd.set_option('display.max_columns', None)
 import matplotlib.pyplot as plt
-from scipy.stats import pearsonr
+
 
 df = pd.read_csv('all_data.csv')
 print(df.info())
@@ -26,19 +26,19 @@ le_usa = df.Life_exp[df.Country == 'United States of America']
 le_zimbabwe = df.Life_exp[df.Country == 'Zimbabwe']
 
 plt.subplot(3,3,1)
-plt.plot(df.Year.unique(), le_chile)
+plt.plot(df.Year.unique(), le_chile, color='purple')
 plt.title('Chile', fontsize=10)
 plt.subplot(3,3,2)
-plt.plot(df.Year.unique(), le_china)
+plt.plot(df.Year.unique(), le_china, color='red')
 plt.title('China', fontsize=10)
 plt.subplot(3,3,3)
-plt.plot(df.Year.unique(), le_germany)
+plt.plot(df.Year.unique(), le_germany, color='orange')
 plt.title('Germany', fontsize=10)
 plt.subplot(3,3,4)
-plt.plot(df.Year.unique(), le_mexico)
+plt.plot(df.Year.unique(), le_mexico, color='green')
 plt.title('Mexico', fontsize=10)
 plt.subplot(3,3,5)
-plt.plot(df.Year.unique(), le_usa)
+plt.plot(df.Year.unique(), le_usa, color='gray')
 plt.title('USA', fontsize=10)
 plt.subplot(3,3,6)
 plt.plot(df.Year.unique(), le_zimbabwe)
@@ -65,19 +65,19 @@ gdp_usa = df.GDP[df.Country == 'United States of America']
 gdp_zimbabwe = df.GDP[df.Country == 'Zimbabwe']
 
 plt.subplot(3,3,1)
-plt.plot(df.Year.unique(), gdp_chile)
+plt.plot(df.Year.unique(), gdp_chile, color='purple')
 plt.title('Chile', fontsize=10)
 plt.subplot(3,3,2)
-plt.plot(df.Year.unique(), gdp_china)
+plt.plot(df.Year.unique(), gdp_china, color='red')
 plt.title('China', fontsize=10)
 plt.subplot(3,3,3)
-plt.plot(df.Year.unique(), gdp_germany)
+plt.plot(df.Year.unique(), gdp_germany, color='orange')
 plt.title('Germany', fontsize=10)
 plt.subplot(3,3,4)
-plt.plot(df.Year.unique(), gdp_mexico)
+plt.plot(df.Year.unique(), gdp_mexico, color='green')
 plt.title('Mexico', fontsize=10)
 plt.subplot(3,3,5)
-plt.plot(df.Year.unique(), gdp_usa)
+plt.plot(df.Year.unique(), gdp_usa, color='gray')
 plt.title('USA', fontsize=10)
 plt.subplot(3,3,6)
 plt.plot(df.Year.unique(), gdp_zimbabwe)
@@ -89,25 +89,25 @@ plt.close('all')
 
 
 for country in countries:
-    print(f'During 15 years starting in 2000 the gross domestic product at birth in {country} raised from'
-          f' {df.GDP[df.Country == country].min()} to {df.GDP[df.Country == country].max()}.')
+    print(f'During 15 years starting in 2000 the gross domestic product in {country} raised from'
+          f' {round((df.GDP[df.Country == country].min())/1000000000)} bln to {round((df.GDP[df.Country == country].max())/1000000000)} bln.')
 
 #3
 
 plt.subplot(3,3,1)
-plt.scatter(gdp_chile, le_chile, s=10)
+plt.scatter(gdp_chile, le_chile, s=10, color='purple')
 plt.title('Chile', fontsize=10)
 plt.subplot(3,3,2)
-plt.scatter(gdp_china, le_china, s=10)
+plt.scatter(gdp_china, le_china, s=10, color="red")
 plt.title('China', fontsize=10)
 plt.subplot(3,3,3)
-plt.scatter(gdp_germany, le_germany, s=10)
+plt.scatter(gdp_germany, le_germany, s=10, color='orange')
 plt.title('Germany', fontsize=10)
 plt.subplot(3,3,4)
-plt.scatter(gdp_mexico, le_mexico, s=10)
+plt.scatter(gdp_mexico, le_mexico, s=10, color='green')
 plt.title('Mexico', fontsize=10)
 plt.subplot(3,3,5)
-plt.scatter(gdp_usa, le_usa, s=10)
+plt.scatter(gdp_usa, le_usa, s=10, color='gray')
 plt.title('USA', fontsize=10)
 plt.subplot(3,3,6)
 plt.scatter(gdp_zimbabwe, le_zimbabwe, s=10)
@@ -116,7 +116,11 @@ plt.subplots_adjust(wspace=0.30, hspace=0.60, bottom=0)
 plt.show()
 plt.clf()
 
-#Correlation
+#4
 
-print(pearsonr(gdp_chile, le_chile))
+for country in countries:
+    print(f'Average live expectancy in {country} is {round((df.Life_exp[df.Country == country].mean()),2)} years.')
 
+
+
+#5
