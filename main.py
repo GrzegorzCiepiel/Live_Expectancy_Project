@@ -117,10 +117,57 @@ plt.show()
 plt.clf()
 
 #4
-
+mean_life = []
 for country in countries:
     print(f'Average live expectancy in {country} is {round((df.Life_exp[df.Country == country].mean()),2)} years.')
+    mean_life.append(round((df.Life_exp[df.Country == country].mean()),2))
 
+print(countries)
 
+colors = ['lightblue', 'CornflowerBlue', 'blue', 'DarkBlue', 'purple', 'DarkOrchid']
+plt.bar(countries, mean_life, color=colors)
+plt.title("Average live expectancy in years")
+ax = plt.subplot()
+ax.set_xticks(range(6))
+ax.set_xticklabels(['Chile', 'China', 'Germany', 'Mexico', 'USA', 'Zimbabwe'])
+plt.show()
+plt.clf()
 
 #5
+
+plt.subplot(3,3,1)
+v1 = plt.violinplot(le_chile, showmeans=True)
+for pc in v1['bodies']:
+    pc.set_facecolor('purple')
+    pc.set_edgecolor('black')
+plt.title('Chile', fontsize=10)
+plt.subplot(3,3,2)
+v2 = plt.violinplot(le_china, showmeans=True)
+for pc in v2['bodies']:
+    pc.set_facecolor('red')
+    pc.set_edgecolor('black')
+plt.title('China', fontsize=10)
+plt.subplot(3,3,3)
+v3 = plt.violinplot(le_germany, showmeans=True)
+for pc in v3['bodies']:
+    pc.set_facecolor('orange')
+    pc.set_edgecolor('black')
+plt.title('Germany', fontsize=10)
+plt.subplot(3,3,4)
+v4 = plt.violinplot(le_mexico, showmeans=True)
+for pc in v4['bodies']:
+    pc.set_facecolor('green')
+    pc.set_edgecolor('black')
+plt.title('Mexico', fontsize=10)
+plt.subplot(3,3,5)
+v5 = plt.violinplot(le_usa, showmeans=True)
+for pc in v5['bodies']:
+    pc.set_facecolor('gray')
+    pc.set_edgecolor('black')
+plt.title('USA', fontsize=10)
+plt.subplot(3,3,6)
+v6 = plt.violinplot(le_zimbabwe, showmeans=True )
+plt.title('Zimbabwe', fontsize=10)
+plt.subplots_adjust(wspace=0.30, hspace=0.50, bottom=0)
+plt.show()
+plt.clf()
