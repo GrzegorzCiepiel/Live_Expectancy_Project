@@ -49,3 +49,21 @@ Over15 years starting in 2000 the gross domestic product in
 
 To answer this question I prepared scatterplot between live expectancy and GDP values for every country:
 ![Live expectancy vs GDP](https://github.com/GrzegorzCiepiel/Live_Expectancy_Project/assets/135313652/259e8706-06f3-467b-88ec-591dd7f509b4)
+
+As we can see ***there is positive correlation*** between live expectancy in GDP in each surveyed country.
+
+4. What is the average life expectancy in these nations?
+
+To answer this question I had to count mean value of all le values from each country.
+I plot the results as a boxplot to compare easily:
+![barplot](https://github.com/GrzegorzCiepiel/Live_Expectancy_Project/assets/135313652/8657a63c-fc84-4595-ab05-b99c667b26a2)
+
+As we can see the mean live expectancy is significantly lower in Zimbabwe.  This country represents also the lowest GDP.
+
+5. What is the distribution of that life expectancy?
+
+To answer this question I plot live expectancy values as a violinplot:
+![Live expectancy distribution](https://github.com/GrzegorzCiepiel/Live_Expectancy_Project/assets/135313652/dd6047a1-7d21-4231-b339-3db7c92e1dd2)
+
+
+
