@@ -25,6 +25,7 @@ le_mexico = df.Life_exp[df.Country == 'Mexico']
 le_usa = df.Life_exp[df.Country == 'United States of America']
 le_zimbabwe = df.Life_exp[df.Country == 'Zimbabwe']
 
+plt.figure()
 plt.subplot(3,3,1)
 plt.plot(df.Year.unique(), le_chile, color='purple')
 plt.title('Chile', fontsize=10)
@@ -44,7 +45,7 @@ plt.subplot(3,3,6)
 plt.plot(df.Year.unique(), le_zimbabwe)
 plt.title('Zimbabwe', fontsize=10)
 plt.subplots_adjust(wspace=0.30, hspace=0.50, bottom=0)
-
+plt.savefig("Live expectancy over time.png")
 plt.show()
 plt.clf()
 
@@ -64,6 +65,7 @@ gdp_mexico = df.GDP[df.Country == 'Mexico']
 gdp_usa = df.GDP[df.Country == 'United States of America']
 gdp_zimbabwe = df.GDP[df.Country == 'Zimbabwe']
 
+plt.figure()
 plt.subplot(3,3,1)
 plt.plot(df.Year.unique(), gdp_chile, color='purple')
 plt.title('Chile', fontsize=10)
@@ -83,7 +85,7 @@ plt.subplot(3,3,6)
 plt.plot(df.Year.unique(), gdp_zimbabwe)
 plt.title('Zimbabwe', fontsize=10)
 plt.subplots_adjust(wspace=0.30, hspace=0.60, bottom=0)
-
+plt.savefig("GDP.png")
 plt.show()
 plt.close('all')
 
@@ -93,7 +95,7 @@ for country in countries:
           f' {round((df.GDP[df.Country == country].min())/1000000000)} bln to {round((df.GDP[df.Country == country].max())/1000000000)} bln.')
 
 #3
-
+plt.figure()
 plt.subplot(3,3,1)
 plt.scatter(gdp_chile, le_chile, s=10, color='purple')
 plt.title('Chile', fontsize=10)
@@ -113,6 +115,7 @@ plt.subplot(3,3,6)
 plt.scatter(gdp_zimbabwe, le_zimbabwe, s=10)
 plt.title('Zimbabwe', fontsize=10)
 plt.subplots_adjust(wspace=0.30, hspace=0.60, bottom=0)
+plt.savefig("Live expectancy vs GDP.png")
 plt.show()
 plt.clf()
 
@@ -125,16 +128,18 @@ for country in countries:
 print(countries)
 
 colors = ['lightblue', 'CornflowerBlue', 'blue', 'DarkBlue', 'purple', 'DarkOrchid']
+plt.figure()
 plt.bar(countries, mean_life, color=colors)
 plt.title("Average live expectancy in years")
 ax = plt.subplot()
 ax.set_xticks(range(6))
 ax.set_xticklabels(['Chile', 'China', 'Germany', 'Mexico', 'USA', 'Zimbabwe'])
+plt.savefig("barplot.png")
 plt.show()
 plt.clf()
 
 #5
-
+plt.figure()
 plt.subplot(3,3,1)
 v1 = plt.violinplot(le_chile, showmeans=True)
 for pc in v1['bodies']:
@@ -169,5 +174,6 @@ plt.subplot(3,3,6)
 v6 = plt.violinplot(le_zimbabwe, showmeans=True )
 plt.title('Zimbabwe', fontsize=10)
 plt.subplots_adjust(wspace=0.30, hspace=0.50, bottom=0)
+plt.savefig("Live expectancy distribution.png")
 plt.show()
 plt.clf()
