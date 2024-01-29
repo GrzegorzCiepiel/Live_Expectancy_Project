@@ -65,5 +65,24 @@ As we can see the mean live expectancy is significantly lower in Zimbabwe.  This
 To answer this question I plot live expectancy values as a violinplot:
 ![Live expectancy distribution](https://github.com/GrzegorzCiepiel/Live_Expectancy_Project/assets/135313652/dd6047a1-7d21-4231-b339-3db7c92e1dd2)
 
+At first it is significant that the samples are small.
+When interpreting the above graphs, it is also worth referr to the change in live expectancy over time.
+In China the growth of live expectancy from 72 to 74 years was very fast. that is why wy have more values over 74 years.
+
+In Zimbabwe the live expectancy  dropped in first years and then started to grow. That is why we have more lower values and the mean value also in lower part of the plot.
+
+## Conclusions
+
+From 2000 to 2015 for 6 countries:
++ Chile
++ China
++ Germany
++ Mexico
++ USA
++ Zimbabwe
+***live expectancy increaset*** over time in every country and it is clearly correlated with growth of gross domestic product.
+ The mean live expectancy is significantly lower in Zimbabwe and started to grow later than in other mentioned countries.  This country represents also the lowest GDP.
+
+
 
 
