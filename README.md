@@ -21,3 +21,11 @@ To answer this question I plot a line showing the change of live expectancy over
 ![Live expectancy over time](https://github.com/GrzegorzCiepiel/Live_Expectancy_Project/assets/135313652/7cf69d7a-8c67-428e-a007-a3e969185011)
 
 As we can see ***live expectancy increaset*** over time in every country.
+
+During 15 years starting in 2000 the life expectancy at birth in:
++ Chile raised from 77.3 to 80.5.
++ China raised from 71.7 to 76.1.
++ Germany raised from 78.0 to 81.0.
++ Mexico raised from 74.8 to 76.7.
++ United States of America raised from 76.8 to 79.3.
++ Zimbabwe raised from 44.3 to 60.7.
