@@ -52,6 +52,24 @@ To answer this question I prepared scatterplot between live expectancy and GDP v
 
 As we can see ***there is positive correlation*** between live expectancy in GDP in each surveyed country.
 
+I want to add one more analyse becouse it is approaching the problem in a different way:
+
+I used quartiles. First split GDP values on two - under second quartile and over second quartile.
+
+Then I checked the GDP-corresponding life expectancy percentiles.
+
+
+I received the results: 
+ >[56.175 75.6   77.925] - "low" GDP
+>
+ >[75.55  78.05  79.125] - "high" GDP
+>
+![LiveexpvsGDP](https://github.com/GrzegorzCiepiel/Live_Expectancy_Project/assets/135313652/7fdc8359-56c5-421e-926c-30559a986520)
+
+This analyse confirms previous conclusion. Higher GDP is correlated with higher live expectancy. On the "low GDP" histogram we can see also that live expectancy and GDP in Zimbabwe is "separate island"
+
+
+
 4. What is the average life expectancy in these nations?
 
 To answer this question I had to count mean value of all le values from each country.
