@@ -1,6 +1,7 @@
 import pandas as pd
 pd.set_option('display.max_columns', None)
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 df = pd.read_csv('all_data.csv')
@@ -175,5 +176,28 @@ v6 = plt.violinplot(le_zimbabwe, showmeans=True )
 plt.title('Zimbabwe', fontsize=10)
 plt.subplots_adjust(wspace=0.30, hspace=0.50, bottom=0)
 plt.savefig("Live expectancy distribution.png")
+plt.show()
+plt.clf()
+
+
+# Let's try to answer third question in a different way:
+life_expectancy = df['Life_exp']
+life_expectancy_quartiles = np.quantile(life_expectancy, [0.25, 0.5, 0.75])
+print(life_expectancy_quartiles)
+gdp = df.GDP
+median_gdp = np.quantile(gdp, 0.5)
+print(median_gdp)
+
+low_gdp = df[df['GDP'] <= median_gdp]
+high_gdp = df[df['GDP'] > median_gdp]
+
+low_gdp_quartiles = np.quantile(low_gdp['Life_exp'], [0.25, 0.5, 0.75])
+high_gdp_quartiles = np.quantile(high_gdp['Life_exp'], [0.25, 0.5, 0.75])
+print(low_gdp_quartiles)
+print(high_gdp_quartiles)
+
+plt.hist(high_gdp['Life_exp'], alpha = 0.5, label = "High GDP")
+plt.hist(low_gdp['Life_exp'], alpha = 0.5, label = "Low GDP")
+plt.legend()
 plt.show()
 plt.clf()
